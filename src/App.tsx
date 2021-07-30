@@ -35,17 +35,19 @@ function App() {
 
 	if (posts.length === 0 && loading)
 		return (
-			<BarLoader
-				loading={true}
-				css={override}
-				color={'#fff'}
-				height={5}
-				width={200}
-			/>
+			<div className='container'>
+				<BarLoader
+					loading={true}
+					css={override}
+					color={'#fff'}
+					height={5}
+					width={200}
+				/>
+			</div>
 		);
 
 	return (
-		<div>
+		<div className='container'>
 			{posts.map((post, index) => {
 				if (index === posts.length - 1)
 					return (
@@ -69,13 +71,15 @@ function App() {
 					/>
 				);
 			})}
-			<BarLoader
-				loading={loading}
-				css={override}
-				color={'#fff'}
-				height={5}
-				width={200}
-			/>
+			<div style={{ minHeight: '4rem' }}>
+				<BarLoader
+					loading={loading}
+					css={override}
+					color={'#fff'}
+					height={5}
+					width={200}
+				/>
+			</div>
 		</div>
 	);
 }

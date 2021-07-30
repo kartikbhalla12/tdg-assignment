@@ -3,11 +3,26 @@ body {
 	color: white;
 }
 
+.container {
+	margin-top: 6rem;
+}
+
 .message-box {
-	margin: 2rem;
+	margin: 2rem auto;
 	border-radius: 5px;
 	background-color: rgba(65, 65, 92, 0.9);
-	padding: 1rem 2rem;
+	padding: 2rem;
+	/* width: 80%; */
+	max-width: 600px;
+}
+.message-box h4 {
+	font-size: 1.1rem;
+	margin: 1rem 0 0 0;
+}
+
+.message-box .desc {
+	margin: 0.5rem 0 0 0;
+	font-size: 0.95rem;
 }
 
 .message-box .user-details {
@@ -15,7 +30,82 @@ body {
 	flex-direction: row;
 }
 
-.message-box .user-details .uname {
-	margin: 1rem;
-	font-style: italic;
+.message-box .user-details p {
+	margin: 0;
 }
+
+.message-box .user-details .uname {
+	margin: 0 0.5rem;
+	font-style: italic;
+	color: #aaa;
+}
+
+.navbar {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	transition: background-color 0.5s;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.navbar.dark-bg {
+	background-color: rgba(22, 24, 40, 0.85);
+	transition: background-color 0.5s;
+}
+
+.navbar .inner-container {
+	height: 4rem;
+	margin: 0 auto;
+	/* max-width: 665px; */
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 2rem;
+}
+
+.navbar .inner-container .sign-in-menu {
+	font-family: 'Poppins', sans-serif;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	flex-basis: 33%;
+	justify-content: right;
+}
+.navbar .inner-container .sign-in-menu .sign-up {
+	margin: 0 2rem;
+}
+.navbar .inner-container .sign-in-menu .sign-in {
+	background-color: rgba(65, 65, 92, 0.9);
+	padding: 0.5rem 1rem;
+	border-radius: 5px;
+}
+.navbar .inner-container .img-container {
+	flex-basis: 33%;
+}
+.navbar .inner-container .img-container img {
+	height: 2rem;
+}
+
+.navbar .name {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+	font-size: 1.4rem;
+	text-align: center;
+	flex-basis: 33%;
+	opacity: 1;
+	transition: opacity 0.5s linear;
+}
+
+.navbar .name.scrolled {
+	/* visibility: hidden; */
+	opacity: 0;
+	transition: opacity 0.5s linear;
+}
+
+/* .navbar h1 {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	margin: 0 1rem;
+	font-size: 1.2rem;
+} */

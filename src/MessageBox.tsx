@@ -15,8 +15,8 @@ const MessageBox = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
 				<p className='uname'>@{username}</p>
 			</div>
 
-			<p>{title}</p>
-			<p>{body}</p>
+			<h4>{title}</h4>
+			<p className='desc'>{body}</p>
 		</div>
 	);
 });
