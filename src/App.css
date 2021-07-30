@@ -73,9 +73,11 @@ body {
 	justify-content: right;
 }
 .navbar .inner-container .sign-in-menu .sign-up {
+	cursor: pointer;
 	margin: 0 2rem;
 }
 .navbar .inner-container .sign-in-menu .sign-in {
+	cursor: pointer;
 	background-color: rgba(65, 65, 92, 0.9);
 	padding: 0.5rem 1rem;
 	border-radius: 5px;
@@ -85,6 +87,7 @@ body {
 }
 .navbar .inner-container .img-container img {
 	height: 2rem;
+	cursor: pointer;
 }
 
 .navbar .name {
@@ -95,6 +98,7 @@ body {
 	flex-basis: 33%;
 	opacity: 1;
 	transition: opacity 0.5s linear;
+	cursor: pointer;
 }
 
 .navbar .name.scrolled {
