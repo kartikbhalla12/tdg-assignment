@@ -50,7 +50,7 @@ body {
 }
 
 .navbar.dark-bg {
-	background-color: rgba(22, 24, 40, 0.85);
+	background-color: rgba(22, 24, 40, 0.8);
 	transition: background-color 0.5s;
 }
 
@@ -70,7 +70,7 @@ body {
 	flex-direction: row;
 	align-items: center;
 	flex-basis: 33%;
-	justify-content: right;
+	justify-content: flex-end;
 }
 .navbar .inner-container .sign-in-menu .sign-up {
 	cursor: pointer;
@@ -79,7 +79,7 @@ body {
 .navbar .inner-container .sign-in-menu .sign-in {
 	cursor: pointer;
 	background-color: rgba(65, 65, 92, 0.9);
-	padding: 0.5rem 1rem;
+	padding: 0.5rem 2rem;
 	border-radius: 5px;
 }
 .navbar .inner-container .img-container {

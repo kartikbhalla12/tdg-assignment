@@ -4,8 +4,8 @@ function Navbar() {
 	const [active, setActive] = React.useState(false);
 
 	const scrollHandler = () => {
-		if (window.scrollY > 40) setActive(true);
-		else setActive(false);
+		if (window.scrollY > 40 && !active) setActive(true);
+		else if (window.scrollY <= 40 && active) setActive(false);
 	};
 	React.useEffect(() => {
 		window.addEventListener('scroll', scrollHandler);
