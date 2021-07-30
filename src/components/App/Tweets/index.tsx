@@ -1,11 +1,10 @@
 import React from 'react';
-import MessageBox from './MessageBox';
-import usePostSearch from './usePostSearch';
-import { css } from '@emotion/react';
-import BarLoader from 'react-spinners/BarLoader';
-import './App.css';
+import TweetBox from './TweetBox';
+import usePostSearch from '../../../hooks/usePostSearch';
+import Loader from '../common/Loader';
+import './style.css';
 
-function App() {
+function Tweets() {
 	const [page, setPage] = React.useState(1);
 	const [limit, setLimit] = React.useState(10);
 
@@ -27,31 +26,19 @@ function App() {
 		[loading, hasMore]
 	);
 
-	const override = css`
-		display: block;
-		margin: 2rem auto;
-		border-radius: 100px;
-	`;
-
 	if (posts.length === 0 && loading)
 		return (
-			<div className='container'>
-				<BarLoader
-					loading={true}
-					css={override}
-					color={'#fff'}
-					height={5}
-					width={200}
-				/>
+			<div className='tweets'>
+				<Loader loading={true} />
 			</div>
 		);
 
 	return (
-		<div className='container'>
+		<div className='tweets'>
 			{posts.map((post, index) => {
 				if (index === posts.length - 1)
 					return (
-						<MessageBox
+						<TweetBox
 							key={post.id}
 							ref={lastElementRef}
 							title={post.title}
@@ -62,7 +49,7 @@ function App() {
 					);
 
 				return (
-					<MessageBox
+					<TweetBox
 						key={post.id}
 						title={post.title}
 						body={post.body}
@@ -72,16 +59,10 @@ function App() {
 				);
 			})}
 			<div style={{ minHeight: '4rem' }}>
-				<BarLoader
-					loading={loading}
-					css={override}
-					color={'#fff'}
-					height={5}
-					width={200}
-				/>
+				<Loader loading={loading} />
 			</div>
 		</div>
 	);
 }
 
-export default App;
+export default Tweets;

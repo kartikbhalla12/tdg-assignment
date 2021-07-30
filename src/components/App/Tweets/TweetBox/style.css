@@ -1,0 +1,33 @@
+.tweet-box {
+	/* margin: 2rem auto; */
+	margin: 2rem 0;
+	border-radius: 5px;
+	background-color: rgba(65, 65, 92, 0.9);
+	padding: 2rem;
+	/* width: 80%; */
+	max-width: 600px;
+}
+.tweet-box h4 {
+	font-size: 1.1rem;
+	margin: 1rem 0 0 0;
+}
+
+.tweet-box .desc {
+	margin: 0.5rem 0 0 0;
+	font-size: 0.95rem;
+}
+
+.tweet-box .user-details {
+	display: flex;
+	flex-direction: row;
+}
+
+.tweet-box .user-details p {
+	margin: 0;
+}
+
+.tweet-box .user-details .uname {
+	margin: 0 0.5rem;
+	font-style: italic;
+	color: #aaa;
+}

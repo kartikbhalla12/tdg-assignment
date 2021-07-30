@@ -1,14 +1,17 @@
 import React from 'react';
+import './style.css';
+
 interface BoxProps {
 	title: string;
 	body: string;
 	name?: string;
 	username?: string;
 }
-const MessageBox = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
+
+const TweetBox = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
 	const { title, body, name, username, ...rest } = props;
 	return (
-		<div ref={ref} {...rest} className='message-box'>
+		<div ref={ref} {...rest} className='tweet-box'>
 			<div className='user-details'>
 				<p>{name}</p>
 
@@ -21,4 +24,4 @@ const MessageBox = React.forwardRef<HTMLDivElement, BoxProps>((props, ref) => {
 	);
 });
 
-export default MessageBox;
+export default TweetBox;

@@ -1,13 +1,15 @@
 import React from 'react';
+import './style.css';
 
 function Navbar() {
 	const [active, setActive] = React.useState(false);
 
-	const scrollHandler = () => {
-		if (window.scrollY > 40 && !active) setActive(true);
-		else if (window.scrollY <= 40 && active) setActive(false);
-	};
 	React.useEffect(() => {
+		const scrollHandler = () => {
+			if (window.scrollY > 40 && !active) setActive(true);
+			else if (window.scrollY <= 40 && active) setActive(false);
+		};
+
 		window.addEventListener('scroll', scrollHandler);
 
 		return () => {
