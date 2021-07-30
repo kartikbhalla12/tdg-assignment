@@ -1,5 +1,9 @@
 import React from 'react';
+import MessageBox from './MessageBox';
 import usePostSearch from './usePostSearch';
+import { css } from '@emotion/react';
+import BarLoader from 'react-spinners/BarLoader';
+import './App.css';
 
 function App() {
 	const [page, setPage] = React.useState(1);
@@ -23,23 +27,55 @@ function App() {
 		[loading, hasMore]
 	);
 
-	if (posts.length === 0 && loading) return <div>Loading...</div>;
+	const override = css`
+		display: block;
+		margin: 2rem auto;
+		border-radius: 100px;
+	`;
+
+	if (posts.length === 0 && loading)
+		return (
+			<BarLoader
+				loading={true}
+				css={override}
+				color={'#fff'}
+				height={5}
+				width={200}
+			/>
+		);
 
 	return (
 		<div>
-			<ul>
-				{posts.map((post, index) => {
-					if (index === posts.length - 1)
-						return (
-							<li key={post.id} ref={lastElementRef}>
-								{post.title}
-							</li>
-						);
+			{posts.map((post, index) => {
+				if (index === posts.length - 1)
+					return (
+						<MessageBox
+							key={post.id}
+							ref={lastElementRef}
+							title={post.title}
+							body={post.body}
+							name={post.name}
+							username={post.username}
+						/>
+					);
 
-					return <li key={index}>{post.title}</li>;
-				})}
-			</ul>
-			{loading && <div>Loading...</div>}
+				return (
+					<MessageBox
+						key={post.id}
+						title={post.title}
+						body={post.body}
+						name={post.name}
+						username={post.username}
+					/>
+				);
+			})}
+			<BarLoader
+				loading={loading}
+				css={override}
+				color={'#fff'}
+				height={5}
+				width={200}
+			/>
 		</div>
 	);
 }
