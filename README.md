@@ -4,7 +4,7 @@ Website Link: https://confident-goldberg-9b34f7.netlify.app/
 
 I have combined the two endpoints that is
 
-* https://jsonplaceholder.typicode.com/_page=1&_limit=10
+* https://jsonplaceholder.typicode.com/posts?_page=1&_limit=10
 * https://jsonplaceholder.typicode.com/users/id
 
 to render name & username along with the tweet
