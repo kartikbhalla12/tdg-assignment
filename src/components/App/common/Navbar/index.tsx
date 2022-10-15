@@ -21,11 +21,13 @@ function Navbar() {
 		<div className={`navbar ${active ? 'dark-bg' : ''}`}>
 			<div className='inner-container'>
 				<div className='img-container'>
-					<img src='/twitter.svg'></img>
+					<img src='/jitter.svg'></img>
 				</div>
-				<div className={`name ${active ? 'scrolled' : ''} `}>Twitter</div>
+				<div className={`name ${active ? 'scrolled' : ''} `}>Jitter</div>
 				<div className='sign-in-menu'>
-					<div className='sign-up'>Signup</div>
+					<div className='sign-up'>
+						<a href='https://www.kartikbhalla.dev'>Back to Portfolio?</a>
+					</div>
 					<div className='sign-in'>Login</div>
 				</div>
 			</div>

@@ -34,6 +34,12 @@
 	cursor: pointer;
 	margin: 0 2rem;
 }
+
+.navbar .inner-container .sign-in-menu .sign-up a {
+	text-decoration: none;
+	color: white;
+}
+
 .navbar .inner-container .sign-in-menu .sign-in {
 	cursor: pointer;
 	background-color: rgba(65, 65, 92, 0.9);
@@ -44,7 +50,7 @@
 	flex-basis: 33%;
 }
 .navbar .inner-container .img-container img {
-	height: 2rem;
+	height: 1.6rem;
 	cursor: pointer;
 }
 
@@ -63,4 +69,10 @@
 	/* visibility: hidden; */
 	opacity: 0;
 	transition: opacity 0.5s linear;
+}
+
+@media screen and (max-width: 450px) {
+	.navbar .name {
+		display: none;
+	}
 }
